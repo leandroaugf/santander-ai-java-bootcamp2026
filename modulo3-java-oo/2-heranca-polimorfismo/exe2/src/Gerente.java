@@ -43,12 +43,13 @@ public class Gerente {
         }
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("=== LOGIN ===");
         System.out.println("Informe o nome: ");
         var nome = scanner.nextLine();
         System.out.println("Informe a senha: ");
         var password = scanner.nextLine();
 
-        if (nome.equals(this.nome) && password.equals(this.senha)) {
+        if (nome.equalsIgnoreCase(this.nome) && password.equals(this.senha)) {
             System.out.println("Login realizado com sucesso!");
             this.isLogged = true;
         } else {
